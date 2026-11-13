@@ -179,22 +179,22 @@ int main() {
     cout << "AUTOMATED TEXT TESTS\n";
 
     const char* am[14] = {
-        "algorithm", "algorithm", "algorithm", "algorithm",
-        "aaaa", "abababa", "abc", "Data data DATA",
-        "one two two", "", "hello hello", "mississippi",
-        "abcabc", "same"
+        "repeat", "repeatable", "repeated", "repeat",
+        "aaaa", "abababa", "rep", "Repeat repeat REPEAT",
+        "repeat one repeat", "", "hello hello", "mississippi",
+        "reprepeat", "same"
     };
 
     const char* an[14] = {
-        "algo", "rith", "thm", "sort",
-        "aa", "aba", "abcd", "data",
-        "two", "x", "", "issi",
-        "abc", "same"
+        "rep", "eat", "ted", "sort",
+        "aa", "aba", "repeat", "repeat",
+        "repeat", "x", "", "issi",
+        "rep", "same"
     };
 
     int ao[14] = {
-        0, 4, 6, -1, 0, 0, -1, 5,
-        4, -1, 0, 1, 0, 0
+        0, 3, 5, -1, 0, 0, -1, 7,
+        0, -1, 0, 1, 0, 0
     };
 
     int ap[14] = {
@@ -203,8 +203,8 @@ int main() {
     };
 
     int aq[14][5] = {
-        { 0 },{ 4 },{ 6 },{ -1 },{ 0, 1, 2 },
-        { 0, 2, 4 },{ -1 },{ 5 },{ 4, 8 },
+        { 0 },{ 3 },{ 5 },{ -1 },{ 0, 1, 2 },
+        { 0, 2, 4 },{ -1 },{ 7 },{ 0, 11 },
         { -1 },{ 0, 6 },{ 1, 4 },{ 0, 3 },{ 0 }
     };
 
@@ -291,7 +291,7 @@ int main() {
 
     cout << "\nEMPTY PATTERN CHECK\n";
 
-    const char bj[] = "abc";
+    const char bj[] = "repeat";
     const char bk[] = "";
 
     int bl = m(
@@ -380,8 +380,8 @@ int main() {
 
     cout << "\nCASE SENSITIVITY CHECK\n";
 
-    const char bu[] = "Case sensitive CASE case";
-    const char bv[] = "case";
+    const char bu[] = "Repeat repeatable REPEAT repeat";
+    const char bv[] = "repeat";
 
     int bw = m(
         bu, bv, false, q, r
@@ -418,7 +418,7 @@ int main() {
 
     cout << "n; scenario; first index; all matches; comparisons; checked positions\n";
 
-    const char ca[] = "abcde";
+    const char ca[] = "repeat";
     const int cb[3] = { 100, 1000, 10000 };
 
     char cc[a];
@@ -433,29 +433,30 @@ int main() {
             cc[n] = '\0';
 
             if (ce == 0) {
-                for (int cf = 0; cf < 5; cf++)
+                for (int cf = 0; cf < 6; cf++)
                     cc[cf] = ca[cf];
             }
             else if (ce == 1) {
                 int cg = n / 2;
 
-                for (int cf = 0; cf < 5; cf++)
+                for (int cf = 0; cf < 6; cf++)
                     cc[cg + cf] = ca[cf];
             }
             else if (ce == 2) {
-                int cg = n - 5;
+                int cg = n - 6;
 
-                for (int cf = 0; cf < 5; cf++)
+                for (int cf = 0; cf < 6; cf++)
                     cc[cg + cf] = ca[cf];
             }
             else {
-                for (int ar = 0; ar + 5 < n; ar += 6) {
-                    cc[ar] = 'a';
-                    cc[ar + 1] = 'b';
-                    cc[ar + 2] = 'c';
-                    cc[ar + 3] = 'd';
-                    cc[ar + 4] = 'z';
-                    cc[ar + 5] = 'x';
+                for (int ar = 0; ar + 6 < n; ar += 7) {
+                    cc[ar] = 'r';
+                    cc[ar + 1] = 'e';
+                    cc[ar + 2] = 'p';
+                    cc[ar + 3] = 'e';
+                    cc[ar + 4] = 'a';
+                    cc[ar + 5] = 'z';
+                    cc[ar + 6] = 'x';
                 }
             }
 
